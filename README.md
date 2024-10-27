@@ -28,5 +28,5 @@ chmod +x setup.sh
 
 ### 3.Run the Script.
 ```bash
-./setup.sh
+./runlinux.sh
 ```
