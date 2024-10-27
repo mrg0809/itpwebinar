@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for Webinar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-3 has-text-centered">Register for the Webinar</h1>
+
+            <div class="box">
+                <form action="{{ url_for('register') }}" method="POST">
+                    <div class="field">
+                        <label class="label" for="name">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" id="name" name="name" placeholder="Your full name">
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label class="label" for="email">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" id="email" name="email" placeholder="example@domain.com">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label" for="phone">Phone</label>
+                        <div class="control">
+                            <input class="input" type="text" id="phone" name="phone" placeholder="Your phone number">
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link" type="submit">Register</button>
+                        </div>
+                        <div class="control">
+                            <a class="button is-light" href="{{ url_for('index') }}">Back to Contacts</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

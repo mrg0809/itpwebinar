@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts and Leads</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-3 has-text-centered">Contacts and Leads</h1>
+
+            <div class="columns">
+                <div class="column">
+                    <h2 class="subtitle is-4">Contacts</h2>
+                    <ul class="list">
+                        {% for contact in contacts %}
+                            <li class="box">{{ contact }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="column">
+                    <h2 class="subtitle is-4">Leads</h2>
+                    <ul class="list">
+                        {% for lead in leads %}
+                            <li class="box">{{ lead }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="has-text-centered">
+                <a class="button is-primary" href="{{ url_for('register') }}">Register for Webinar</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
